@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kliker - Zdarzenia Myszy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="800px-Steel_Ball_Infobox.jpg">
+</head>
+<body>
+
+    <div id="profil-gracza">
+        <h2>Rozstrzelaj mniejszości etniczne kliker</h2>
+        <label for="nick-gracza">Twój Nick:</label>
+        <input type="text" id="nick-gracza" placeholder="Wpisz nick..." maxlength="15">
+        <p>Najlepszy wynik: <b id="najlepszy-wynik">0</b> pkt</p>
+    </div>
+
+    <div id="tablica-punktow">
+        Ofiary: <span id="glowny-licznik">0</span>
+    </div>
+
+    <div id="obszar">
+        <img id="moj-obrazek" src="https://api.iconify.design/twemoji:gem-stone.svg" alt="Obrazek">
+        <p id="tekst-wewnatrz">Poziom 1</p>
+    </div>
+
+    <!-- Statusy Zdarzeń Myszy -->
+    <div id="komunikat">
+        <span class="status">Najechano na obszar</span>
+        <span class="status">Opuszczono obszar</span>
+        <span class="status">Kliknięto! Liczba kliknięć: <b id="licznik">0</b></span>
+    </div>
+
+    <!-- Sklep -->
+    <div id="sklep">
+        <h2>Robole</h2>
+        <div class="ulepszenie">
+            <button id="kup-sila">Dodaj Robola do rozstrzelania mniejszości (+<span id="moc-kliku-opisu">1</span> do kliku)</button>
+            <p>Koszt: <b id="koszt-sila">10</b> punktów</p>
+        </div>
+
+        <div class="ulepszenie">
+            <button id="kup-moc-10">Kup potężnego Robola do rozstrzelania mniejszości (+10 do kliku)</button>
+            <p>Koszt: <b id="koszt-moc-10">150</b> punktów</p>
+        </div>
+
+        <div class="ulepszenie">
+            <button id="kup-moc-100">Kup armię Roboli do rozstrzelania mniejszości (+100 do kliku)</button>
+            <p>Koszt: <b id="koszt-moc-100">1500</b> punktów</p>
+        </div>
+    </div>
+
+    <!-- MINIGRA SBR Z 10 JEŹDŹCAMI -->
+    <div id="sbr-kontener" style="width: 520px; background: rgba(25, 12, 40, 0.95); border: 3px solid #b14def; padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 30px; box-shadow: 0 0 20px rgba(177, 77, 239, 0.5);">
+        <h2 style="color: #ffcc00; margin-top: 0; text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);">🐎 STEEL BALL RUN RACE 🐎</h2>
+        <p style="color: #e0d0ff; font-size: 0.95em; font-weight: bold;">Wybierz swojego faworyta spośród 10 uczestników</p>
+        
+        <!-- Przyciski wyboru 10 jeźdźców -->
+        <div style="margin: 12px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 5px;">
+            <button class="btn-sbr-faworyt" data-wybor="1" style="padding: 6px 9px; background: #900bdd; color: white; border: 2px solid transparent; border-radius: 5px; font-size: 0.8em; font-weight: bold; cursor: pointer;">1. Johnny</button>
+            <button class="btn-sbr-faworyt" data-wybor="2" style="padding: 6px 9px; background: #900bdd; color: white; border: 2px solid transparent; border-radius: 5px; font-size: 0.8em; font-weight: bold; cursor: pointer;">2. Gyro</button>
+            <button class="btn-sbr-faworyt" data-wybor="3" style="padding: 6px 9px; background: #900bdd; color: white; border: 2px solid transparent; border-radius: 5px; font-size: 0.8em; font-weight: bold; cursor: pointer;">3. Diego</button>
+            <button class="btn-sbr-faworyt" data-wybor="4" style="padding: 6px 9px; background: #900bdd; color: white; border: 2px solid transparent; border-radius: 5px; font-size: 0.8em; font-weight: bold; cursor: pointer;">4. Hot Pants</button>
+            <button class="btn-sbr-faworyt" data-wybor="5" style="padding: 6px 9px; background: #900bdd; color: white; border: 2px solid transparent; border-radius: 5px; font-size: 0.8em; font-weight: bold; cursor: pointer;">5. Ringo</button>
+            <button class="btn-sbr-faworyt" data-wybor="6" style="padding: 6px 9px; background: #900bdd; color: white; border: 2px solid transparent; border-radius: 5px; font-size: 0.8em; font-weight: bold; cursor: pointer;">6. M. Tim</button>
+            <button class="btn-sbr-faworyt" data-wybor="7" style="padding: 6px 9px; background: #900bdd; color: white; border: 2px solid transparent; border-radius: 5px; font-size: 0.8em; font-weight: bold; cursor: pointer;">7. Wekapipo</button>
+            <button class="btn-sbr-faworyt" data-wybor="8" style="padding: 6px 9px; background: #900bdd; color: white; border: 2px solid transparent; border-radius: 5px; font-size: 0.8em; font-weight: bold; cursor: pointer;">8. Pocoloco</button>
+            <button class="btn-sbr-faworyt" data-wybor="9" style="padding: 6px 9px; background: #900bdd; color: white; border: 2px solid transparent; border-radius: 5px; font-size: 0.8em; font-weight: bold; cursor: pointer;">9. Sandman</button>
+            <button class="btn-sbr-faworyt" data-wybor="10" style="padding: 6px 9px; background: #900bdd; color: white; border: 2px solid transparent; border-radius: 5px; font-size: 0.8em; font-weight: bold; cursor: pointer;">10. Norisuke</button>
+        </div>
+
+        <!-- Wielki tor z własnym tłem (sbr_tlo.jpg) i 10 ścieżkami -->
+        <div id="sbr-tor" style="width: 100%; height: 310px; background: url('1200px-Steel_Ball_Run_Map_-_North_America.jpg') center/cover no-repeat #1a0b2e; border-radius: 8px; position: relative; overflow: hidden; margin: 15px 0; border: 2px solid #ffcc00; box-shadow: inset 0 0 15px rgba(0,0,0,0.8);">
+            <div id="sbr-koniu-1" style="position: absolute; left: 5px; top: 2px; font-size: 13px; transition: left 0.15s linear; text-shadow: 1px 1px 2px rgb(255, 255, 255);"> 1. J🐎</div>
+            <div id="sbr-koniu-2" style="position: absolute; left: 5px; top: 32px; font-size: 13px; transition: left 0.15s linear; text-shadow: 1px 1px 2px rgb(255, 255, 255);"> 2. G🐎</div>
+            <div id="sbr-koniu-3" style="position: absolute; left: 5px; top: 62px; font-size: 13px; transition: left 0.15s linear; text-shadow: 1px 1px 2px rgb(255, 255, 255);"> 3. D🐎</div>
+            <div id="sbr-koniu-4" style="position: absolute; left: 5px; top: 92px; font-size: 13px; transition: left 0.15s linear; text-shadow: 1px 1px 2px rgb(255, 255, 255);"> 4. H🐎</div>
+            <div id="sbr-koniu-5" style="position: absolute; left: 5px; top: 122px; font-size: 13px; transition: left 0.15s linear; text-shadow: 1px 1px 2px rgb(255, 255, 255);"> 5. R🐎</div>
+            <div id="sbr-koniu-6" style="position: absolute; left: 5px; top: 152px; font-size: 13px; transition: left 0.15s linear; text-shadow: 1px 1px 2px rgb(255, 255, 255);"> 6. M🐎</div>
+            <div id="sbr-koniu-7" style="position: absolute; left: 5px; top: 182px; font-size: 13px; transition: left 0.15s linear; text-shadow: 1px 1px 2px rgb(255, 255, 255);"> 7. W🐎</div>
+            <div id="sbr-koniu-8" style="position: absolute; left: 5px; top: 212px; font-size: 13px; transition: left 0.15s linear; text-shadow: 1px 1px 2px rgb(255, 255, 255);"> 8. P🐎</div>
+            <div id="sbr-koniu-9" style="position: absolute; left: 5px; top: 242px; font-size: 13px; transition: left 0.15s linear; text-shadow: 1px 1px 2px rgb(255, 255, 255);"> 9. S🦵🏼</div>
+            <div id="sbr-koniu-10" style="position: absolute; left: 5px; top: 272px; font-size: 13px; transition: left 0.15s linear; text-shadow: 1px 1px 2px rgb(255, 255, 255);"> 0. N🐎</div>
+            
+            <!-- Linia mety -->
+            <div style="position: absolute; right: 15px; top: 0; width: 6px; height: 100%; background: repeating-linear-gradient(0deg, #fff, #fff 10px, #000 10px, #000 20px);"></div>
+        </div>
+
+        <button id="sbr-start" style="width: 100%; padding: 12px; background: #b14def; color: white; border: none; border-radius: 8px; font-size: 1.1em; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">Wystartuj Wyścig (Wpisowe: 100 pkt)</button>
+        <p id="sbr-status" style="color: #ffcc00; font-size: 1em; margin: 12px 0 0 0; font-weight: bold; min-height: 24px;">Wybierz swojego jeźdźca</p>
+    </div>
+
+    <!-- Ranking -->
+    <div id="tabela-wynikow-kontener">
+        <h2>Tabela Wyników (TOP 5)</h2>
+        <ol id="lista-wynikow"></ol>
+    </div>
+
+    <script src="jquery-3.6.1.js"></script>
+    <script src="Untitled-2.js"></script>
+</body>
+</html>
