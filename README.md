@@ -1,1 +1,1 @@
-# https://modelhvbertt1/kliker_mniejszosc
+# https://modelhvbertt1.github.io/kliker_mniejszosc
