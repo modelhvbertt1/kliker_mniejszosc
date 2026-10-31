@@ -27,7 +27,7 @@ $(document).ready(function() {
     audioMuzyka10k.loop = true;
 
     
-    let audioMuzykaAU = new Audio('America - A Horse With No Name (Official Audio).mp3'); 
+    let audioMuzykaAU = new Audio(''); 
     audioMuzykaAU.loop = true;
 
    
@@ -187,7 +187,7 @@ $(document).ready(function() {
                 ];
 
                 if (wybranySBR === zwyciezca) {
-                    let nagroda = 1000;
+                    let nagroda = 10000;
                     ileKlikniec += nagroda;
                     $('#sbr-status').html(`WYGRANA! 🎉 ${imiona[zwyciezca]} wygrywa wyścig! (+${nagroda} pkt)`);
 
