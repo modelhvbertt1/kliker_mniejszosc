@@ -201,7 +201,7 @@ $(document).ready(function() {
                 } else {
                     if (!czyJestWAlternatywnymUniwersum) {
                         licznikPrzegranychSBR++;
-                        $('#sbr-status').html(`PRZEGRANA (${licznikPrzegranychSBR}/6)! 😢 Wygrał: ${imiona[zwyciezca]}.`);
+                        $('#sbr-status').html(`PRZEGRANA (${licznikPrzegranychSBR})! 😢 Wygrał: ${imiona[zwyciezca]}.`);
                     } else {
                         $('#sbr-status').html(`PRZEGRANA w AU! 😢 Wygrał: ${imiona[zwyciezca]}. Wygrana jest wymagana, by uciec!`);
                     }
